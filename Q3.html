@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 01</title>
+</head>
+<body>
+    <script>
+   let Segunda = parseInt(prompt("Digite e temp de Segunda"))
+   let Terça = parseInt(prompt("Digite e temp de Terça"))
+   let Quarta = parseInt(prompt("Digite e temp de Quarta"))
+   let Quinta = parseInt(prompt("Digite e temp de Quinta"))
+   let Sexta = parseInt(prompt("Digite e temp de Sexta"))
+   let Sabado = parseInt(prompt("Digite e temp de Sabado"))
+   let Domingo = parseInt(prompt("Digite e temp de Domingo"))
+   const Tempo = [Segunda, Terça, Quarta, Quinta, Sexta, Sabado, Domingo]
+   var minTempo = Tempo.map(Number).reduce(function(a,b) {
+       return Math.min(a, b);
+
+   })
+
+   var maxTempo = Tempo.map(Number).reduce(function(a,b) {
+       return Math.max(a, b);
+
+   })
+   
+
+   alert(minTempo +  "  Temperatura Minima da Semana")
+   alert(maxTempo + "Temperatura Maior da Semana")
+    </script>
+
+</body>
+</html>

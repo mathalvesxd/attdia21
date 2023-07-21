@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 04</title>
+</head>
+<body>
+    <script>
+        function organizarClientes() {
+            const clientesPreferencial = [];
+            const clientesFilaNormal = [];
+
+            while (true) {
+                const nome = prompt("Digite o nome do cliente (ou 'Fim' para sair):");
+                if (nome.toLowerCase() === "fim") {
+                break;
+                }
+
+                const idade = parseInt(prompt("Digite a idade do cliente:"));
+
+                if (idade >= 60) {
+                clientesPreferencial.push({ nome, idade });
+                } else {
+                clientesFilaNormal.push({ nome, idade });
+                }
+            }
+
+            let preferencialMsg = "Clientes preferenciais:\n";
+            for (const cliente of clientesPreferencial) {
+                preferencialMsg += `${cliente.nome} - ${cliente.idade} anos\n`;
+            }
+
+            let filaNormalMsg = "Clientes na fila normal:\n";
+            for (const cliente of clientesFilaNormal) {
+                filaNormalMsg += `${cliente.nome} - ${cliente.idade} anos\n`;
+            }
+
+            alert(preferencialMsg + "\n" + filaNormalMsg);
+            }
+
+            organizarClientes();
+    </script>
+</body>
+</html>

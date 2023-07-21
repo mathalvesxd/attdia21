@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 08</title>
+</head>
+<body>
+    <script>
+        function verificarEmprestimo(rendaCliente, valorParcela) {
+        const limitePorcentagem = 30;
+
+        const limiteParcela = (rendaCliente * limitePorcentagem) / 100;
+
+        if (valorParcela <= limiteParcela) {
+            alert("EMPRÉSTIMO APROVADO");
+        } else {
+            alert("EMPRÉSTIMO NÃO APROVADO");
+        }
+        }
+
+        const rendaCliente = parseInt(prompt("Digite a renda do cliente: "));
+        const valorParcela = parseInt(prompt("Digite o valor da parcela: "));
+
+        const resultado = verificarEmprestimo(rendaCliente, valorParcela);
+
+    </script>
+</body>
+</html>
